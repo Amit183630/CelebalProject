@@ -1,0 +1,105 @@
+form{
+    margin: 2px;
+    padding: 10px;
+    text-align: center;
+    width: 50%;
+    border: 10px solid grey;
+}
+.button {
+  border-radius: 4px;
+  /*background-color: #ff23de;*/
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 22px;
+  padding: 15px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+body:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+a, a > span {
+  position: relative;
+  color: inherit;
+  text-decoration: none;
+  line-height: 24px;
+}
+a:before, a:after, a > span:before, a > span:after {
+  content: '';
+  position: absolute;
+  transition: transform .5s ease;
+}
+
+.effect5 {
+  display: inline-block;
+  overflow: hidden;
+}
+.effect5:before, .effect5:after {
+  right: 0;
+  bottom: 0;
+  background: #e60023;
+}
+.effect5:before {
+  width: 100%;
+  height: 2px;
+  transform: translateX(-100%);
+}
+.effect5:after {
+  width: 2px;
+  height: 100%;
+  transform: translateY(100%);
+}
+.effect5 > span {
+  display: block;
+  padding: 10px;
+}
+.effect5 > span:before, .effect5 > span:after {
+  left: 0;
+  top: 0;
+  background: #e60023;
+}
+.effect5 > span:before {
+  width: 100%;
+  height: 2px;
+  transform: translateX(100%);
+}
+.effect5 > span:after {
+  width: 2px;
+  height: 100%;
+  transform: translateY(-100%);
+}
+.effect5:hover:before, .effect5:hover:after, .effect5:hover > span:before, .effect5:hover > span:after {
+  transform: translate(0, 0);
+}
