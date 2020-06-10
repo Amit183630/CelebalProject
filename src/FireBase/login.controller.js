@@ -8,7 +8,7 @@
 		firebase.auth().onAuthStateChanged(function(user) {
       if(user){
 				alert('already Logged in');
-        $window.location.href="/";
+        $window.location.href="#!/";
       }
     })
 		var LoginCtrl=this;
