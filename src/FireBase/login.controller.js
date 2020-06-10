@@ -3,9 +3,14 @@
 	angular.module('FireBase')
 	.controller('LoginController',LoginController);
 
-
-	LoginController.$inject=['FireBaseService'];
-	function LoginController(FireBaseService) {
+	LoginController.$inject=['FireBaseService','$window'];
+	function LoginController(FireBaseService,$window) {
+		firebase.auth().onAuthStateChanged(function(user) {
+      if(user){
+				alert('already Logged in');
+        $window.location.href="/";
+      }
+    })
 		var LoginCtrl=this;
 		LoginCtrl.email="";
 		LoginCtrl.password="";

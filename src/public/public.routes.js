@@ -25,7 +25,8 @@
     })
     .state('public.home',{
       url:'/',
-      templateUrl:'src/public/home/home.html'
+      templateUrl:'src/public/home/home.html',
+      controller:'HomeController'
     })
     .state('public.menu',{
       url:'/menu',
