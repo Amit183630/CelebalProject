@@ -6,7 +6,7 @@
   function HomeController($window) {
     firebase.auth().onAuthStateChanged(function(user) {
       if(!user){
-        $window.location.href="/login";
+        $window.location.href="#/login";
       }
     });
   }
